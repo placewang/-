@@ -1,0 +1,21 @@
+--cpu Cortex-M0
+".\hex\system_mm32spin06xx_s.o"
+".\hex\startup_mm32spin06xx_s_keil.o"
+".\hex\hal_gpio.o"
+".\hex\hal_rcc.o"
+".\hex\hal_uart.o"
+".\hex\hal_misc.o"
+".\hex\hal_tim.o"
+".\hex\hal_spi.o"
+".\hex\hal_can.o"
+".\hex\delay.o"
+".\hex\uart.o"
+".\hex\gpio.o"
+".\hex\tim3_pwm_input.o"
+".\hex\spi.o"
+".\hex\can.o"
+".\hex\main.o"
+--library_type=microlib --strict --scatter ".\HEX\motor_can.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\motor_can.map" -o .\HEX\motor_can.axf
